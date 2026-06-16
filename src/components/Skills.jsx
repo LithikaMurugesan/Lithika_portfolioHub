@@ -12,7 +12,6 @@ const categories = [
     skills: [
       { name: 'C',          pct: 80 },
       { name: 'Java',       pct: 90 },
-      { name: 'Python',     pct: 72 },
       { name: 'JavaScript', pct: 88 },
     ],
   },
