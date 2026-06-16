@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', var(--font-sans);
+  
+  --color-sky-bg: #EFF6FF;
+  --color-sky-card: #FFFFFF;
+  --color-sky-navy: #1E3A8A;
+  --color-sky-accent: #2563EB;
+  --color-sky-text: #374151;
+  --color-sky-muted: #4B5563;
+  --color-sky-border: #DBEAFE;
+}
+
+:root {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #EFF6FF; /* Very light blue */
+  color: #374151; /* Dark gray */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom premium scrollbar matching sky theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EFF6FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #DBEAFE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Sky theme radial glows */
+.glow-spot-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.06) 0%, rgba(239, 246, 255, 0) 65%);
+}
+
+.glow-spot-soft {
+  background: radial-gradient(circle at 50% 50%, rgba(219, 234, 254, 0.4) 0%, rgba(239, 246, 255, 0) 65%);
+}
+
+/* Glassmorphism inspired soft-shadow card panel */
+.sky-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #DBEAFE;
+  box-shadow: 0 4px 20px rgba(30, 58, 138, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sky-card-hover:hover {
+  background: #FFFFFF;
+  border-color: #2563EB;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px -10px rgba(37, 99, 235, 0.12);
+}
+
+/* Grid overlay with soft blue dots */
+.grid-overlay-sky {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Print layout overrides */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  nav, footer, button, form, .no-print {
+    display: none !important;
+  }
+  section {
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+    page-break-inside: avoid;
+  }
+  .sky-card {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}
+
+/* Custom fade-in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
