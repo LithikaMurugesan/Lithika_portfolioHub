@@ -124,7 +124,7 @@ export default function Hero() {
                 {/* Photo frame */}
                 <div className="rounded-2xl overflow-hidden" style={{height: '380px', width: '100%'}}>
                   <img
-                    src="/profile.jpg"
+                    src="/profile.png"
                     alt="Lithika Murugesan - Software Developer"
                     style={{
                       width: '100%',
