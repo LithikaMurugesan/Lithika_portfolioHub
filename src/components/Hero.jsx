@@ -149,7 +149,7 @@ export default function Hero() {
         {/* Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto border-t border-sky-border pt-12 text-center mt-16 animate-fade-in animate-delay-300">
           <div className="p-4">
-            <h3 className="text-3xl sm:text-4xl font-bold font-heading text-sky-accent">200+</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold font-heading text-sky-accent">400+</h3>
             <p className="text-xs sm:text-sm text-sky-muted uppercase tracking-widest mt-1 font-semibold">DSA Challenges Solved</p>
           </div>
           <div className="p-4">
